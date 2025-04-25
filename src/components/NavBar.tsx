@@ -8,37 +8,34 @@ const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm py-4 px-6 sticky top-0 z-50">
+    <nav className="bg-white/80 backdrop-blur-md shadow-sm py-4 px-6 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
-          <Eye className="h-6 w-6 text-eye-primary" />
-          <span className="text-xl font-bold text-eye-dark">
-            EyeVision<span className="text-eye-primary">AI</span>
+          <Eye className="h-6 w-6 text-primary" />
+          <span className="text-xl font-bold text-secondary">
+            Retinal<span className="text-primary">AI</span>
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6 items-center">
-          <Link to="/" className="text-gray-700 hover:text-eye-primary font-medium transition-colors">
+        <div className="hidden md:flex space-x-8 items-center">
+          <Link to="/" className="text-secondary hover:text-primary font-medium transition-colors">
             Home
           </Link>
-          <Link to="/diagnosis" className="text-gray-700 hover:text-eye-primary font-medium transition-colors">
+          <Link to="/diagnosis" className="text-secondary hover:text-primary font-medium transition-colors">
             Diagnosis
           </Link>
-          <Link to="/about" className="text-gray-700 hover:text-eye-primary font-medium transition-colors">
+          <Link to="/about" className="text-secondary hover:text-primary font-medium transition-colors">
             About Us
           </Link>
-          <Link to="/contact" className="text-gray-700 hover:text-eye-primary font-medium transition-colors">
+          <Link to="/contact" className="text-secondary hover:text-primary font-medium transition-colors">
             Contact
           </Link>
-          <Button variant="default" className="bg-eye-primary hover:bg-eye-secondary text-white">
-            Get Started
-          </Button>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-500 focus:outline-none"
+          className="md:hidden text-secondary focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
@@ -65,39 +62,32 @@ const NavBar = () => {
           <div className="flex flex-col space-y-4">
             <Link
               to="/"
-              className="text-gray-700 hover:text-eye-primary font-medium transition-colors px-3 py-2"
+              className="text-secondary hover:text-primary font-medium transition-colors px-3 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/diagnosis"
-              className="text-gray-700 hover:text-eye-primary font-medium transition-colors px-3 py-2"
+              className="text-secondary hover:text-primary font-medium transition-colors px-3 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Diagnosis
             </Link>
             <Link
               to="/about"
-              className="text-gray-700 hover:text-eye-primary font-medium transition-colors px-3 py-2"
+              className="text-secondary hover:text-primary font-medium transition-colors px-3 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About Us
             </Link>
             <Link
               to="/contact"
-              className="text-gray-700 hover:text-eye-primary font-medium transition-colors px-3 py-2"
+              className="text-secondary hover:text-primary font-medium transition-colors px-3 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
             </Link>
-            <Button
-              variant="default"
-              className="bg-eye-primary hover:bg-eye-secondary text-white w-full"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Get Started
-            </Button>
           </div>
         </div>
       )}
