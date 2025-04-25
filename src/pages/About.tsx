@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Monitor, Search, Award } from "lucide-react";
 import {
@@ -6,7 +5,6 @@ import {
   Tooltip,
   XAxis, 
   YAxis,
-  HeatMap, 
   Area, 
   ComposedChart,
   CartesianGrid
