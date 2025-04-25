@@ -63,12 +63,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				// Using direct color values for better visualization of vibrant gradients
 				eye: {
-					primary: '#0EA5E9',
-					secondary: '#1EAEDB',
-					accent: '#D946EF',
-					light: '#D3E4FD',
-					dark: '#1A1F2C'
+					primary: '#C471F5',
+					secondary: '#F377AB',
+					accent: '#FF9A9E',
+					light: '#FAD0C4',
+					dark: '#592E83'
 				}
 			},
 			borderRadius: {
@@ -96,12 +97,17 @@ export default {
 				'pulse-slow': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.7' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'pulse-slow': 'pulse-slow 3s infinite'
+				'pulse-slow': 'pulse-slow 3s infinite',
+				'fade-in': 'fade-in 0.5s ease-out'
 			}
 		}
 	},

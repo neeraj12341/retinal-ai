@@ -2,13 +2,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Eye } from "lucide-react";
+import { Eye, Heart } from "lucide-react";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white/80 backdrop-blur-md shadow-sm py-4 px-6 sticky top-0 z-50">
+    <nav className="bg-white/80 backdrop-blur-md shadow-md py-4 px-6 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
           <Eye className="h-6 w-6 text-primary" />

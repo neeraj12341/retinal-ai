@@ -7,7 +7,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend 
 } from "recharts";
 import { toast } from "sonner";
-import { Eye } from "lucide-react"; // Import the Eye icon from lucide-react
+import { Eye, Upload, AlertTriangle, CheckCircle } from "lucide-react"; 
 
 // For demo purposes - this would be replaced by actual model prediction
 const mockPrediction = (file: File): Promise<any> => {
@@ -91,13 +91,13 @@ const healthTips = {
 };
 
 // COLORS for charts
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884d8"];
+const COLORS = ["#C471F5", "#F377AB", "#84FAB0", "#8FD3F4", "#FFD1FF"];
 const COLOR_MAP = {
-  Cataract: "#0088FE",
-  AMD: "#00C49F",
-  DR: "#FFBB28",
-  Glaucoma: "#FF8042",
-  Healthy: "#8884d8"
+  Cataract: "#C471F5",
+  AMD: "#F377AB",
+  DR: "#84FAB0",
+  Glaucoma: "#8FD3F4",
+  Healthy: "#FFD1FF"
 };
 
 const Diagnosis = () => {
@@ -175,9 +175,10 @@ const Diagnosis = () => {
   };
   
   return (
-    <div className="container mx-auto py-8 px-6">
+    <div className="container mx-auto py-12 px-6">
       <div className="text-center mb-12">
-        <h1 className="text-3xl font-bold mb-4">Retinal Disease Diagnosis</h1>
+        <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Retinal Disease Diagnosis</h1>
+        <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Upload a high-quality retinal scan image for AI analysis. Our advanced model can 
           detect signs of Cataract, AMD, Diabetic Retinopathy, and Glaucoma.
@@ -185,9 +186,10 @@ const Diagnosis = () => {
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <Card>
+        <Card className="border-none shadow-xl overflow-hidden rounded-2xl card-hover">
+          <div className="h-2 bg-primary"></div>
           <CardContent className="p-6">
-            <h2 className="text-xl font-semibold mb-4">Upload Retinal Image</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-primary">Upload Retinal Image</h2>
             <div className="mb-6">
               <input
                 type="file"
@@ -198,7 +200,7 @@ const Diagnosis = () => {
               />
               <label
                 htmlFor="image-upload"
-                className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors"
+                className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed border-primary/30 rounded-xl cursor-pointer bg-accent/10 hover:bg-accent/20 transition-colors"
               >
                 {imagePreview ? (
                   <img 
@@ -208,20 +210,10 @@ const Diagnosis = () => {
                   />
                 ) : (
                   <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                    <svg 
-                      className="w-10 h-10 mb-3 text-gray-400" 
-                      fill="none" 
+                    <Upload
+                      className="w-10 h-10 mb-3 text-primary" 
                       stroke="currentColor" 
-                      viewBox="0 0 24 24" 
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth="2" 
-                        d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                      ></path>
-                    </svg>
+                    />
                     <p className="mb-2 text-sm text-gray-500">
                       <span className="font-semibold">Click to upload</span> or drag and drop
                     </p>
@@ -235,7 +227,7 @@ const Diagnosis = () => {
               <Button 
                 onClick={handleAnalyze}
                 disabled={!selectedFile || isAnalyzing}
-                className="bg-eye-primary hover:bg-eye-secondary text-white w-full"
+                className="bg-primary hover:bg-secondary text-white w-full rounded-full py-6"
               >
                 {isAnalyzing ? (
                   <>
@@ -253,12 +245,13 @@ const Diagnosis = () => {
           </CardContent>
         </Card>
         
-        <Card className={`${!result ? 'bg-gray-50' : ''}`}>
+        <Card className={`border-none shadow-xl overflow-hidden rounded-2xl ${!result ? 'green-gradient' : 'card-hover'}`}>
+          <div className="h-2 bg-secondary"></div>
           <CardContent className="p-6">
-            <h2 className="text-xl font-semibold mb-4">Results</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-secondary">Results</h2>
             
             {!result && (
-              <div className="flex flex-col items-center justify-center h-64 text-gray-500">
+              <div className="flex flex-col items-center justify-center h-64 text-white">
                 <Eye className="h-12 w-12 mb-3" />
                 <p>Upload and analyze a retinal image to see results here</p>
               </div>
@@ -266,17 +259,15 @@ const Diagnosis = () => {
             
             {result && (
               <div>
-                <div className="mb-6 p-4 rounded-lg bg-gray-50">
+                <div className="mb-6 p-4 rounded-xl purple-gradient text-white">
                   <h3 className="font-medium text-lg mb-2">Diagnosis:</h3>
                   <div className="flex items-center">
                     <span 
-                      className={`text-2xl font-bold ${
-                        result.prediction === "Healthy" ? "text-green-600" : "text-amber-600"
-                      }`}
+                      className="text-2xl font-bold"
                     >
                       {result.prediction}
                     </span>
-                    <span className="ml-2 text-gray-500">
+                    <span className="ml-2 text-white/80">
                       ({(result.confidence[result.prediction] * 100).toFixed(1)}% confidence)
                     </span>
                   </div>
@@ -312,17 +303,18 @@ const Diagnosis = () => {
       
       {/* Recommendations Section */}
       {result && (
-        <Card className="mt-8">
+        <Card className="mt-8 border-none shadow-xl overflow-hidden rounded-2xl">
+          <div className="h-2 bg-gradient-to-r from-primary to-secondary"></div>
           <CardContent className="p-6">
-            <h2 className="text-xl font-semibold mb-4">Recommendations</h2>
+            <h2 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Recommendations</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+              <div className="orange-gradient rounded-xl p-6 text-white">
                 <h3 className="font-medium text-lg mb-3">Health Tips:</h3>
                 <ul className="space-y-2">
                   {healthTips[result.prediction as keyof typeof healthTips].map((tip, index) => (
                     <li key={index} className="flex items-start">
-                      <span className="text-eye-primary mr-2">•</span>
+                      <CheckCircle className="h-5 w-5 text-white mr-2 mt-1 flex-shrink-0" />
                       <span>{tip}</span>
                     </li>
                   ))}
@@ -356,8 +348,9 @@ const Diagnosis = () => {
               </div>
             </div>
             
-            <div className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
-              <p className="text-amber-800 font-medium">
+            <div className="mt-6 p-4 bg-gradient-to-r from-amber-100 to-amber-50 border border-amber-200 rounded-xl">
+              <p className="text-amber-800 font-medium flex items-start">
+                <AlertTriangle className="h-5 w-5 mr-2 mt-1 flex-shrink-0" />
                 <strong>Important:</strong> This AI analysis is for informational purposes only and does not replace professional medical advice. 
                 Please consult with an eye care specialist for proper diagnosis and treatment.
               </p>
