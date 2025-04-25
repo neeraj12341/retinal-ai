@@ -34,7 +34,6 @@ const About = () => {
     }
   ];
 
-  // Confusion matrix data
   const confusionMatrixData = [
     { name: "ARMD", ARMD: 51, cataract: 0, diabetic_retinopathy: 0, glaucoma: 0, normal: 0 },
     { name: "cataract", ARMD: 0, cataract: 99, diabetic_retinopathy: 0, glaucoma: 1, normal: 4 },
@@ -46,30 +45,33 @@ const About = () => {
   return (
     <div className="container mx-auto py-12 px-6">
       <div className="mb-16">
-        <h1 className="text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">About RetinalAI</h1>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
-          Empowering patients and healthcare providers with cutting-edge AI technology
-          for early detection and management of retinal diseases.
+        <h1 className="text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+          Pioneering AI in Eye Care
+        </h1>
+        <p className="text-xl text-foreground/80 max-w-3xl mx-auto text-center font-medium">
+          Leading the revolution in early detection and management of retinal diseases 
+          through advanced artificial intelligence.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div className="order-2 lg:order-1">
-          <h2 className="text-3xl font-bold mb-4 text-primary">Our Mission</h2>
+          <h2 className="text-3xl font-bold mb-4 text-primary">Our Vision</h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mb-6 rounded-full"></div>
-          <p className="text-gray-600 mb-4">
-            At RetinalAI, we're committed to making advanced eye disease detection accessible to everyone. 
-            Our mission is to leverage artificial intelligence to provide early detection of vision-threatening 
-            conditions, helping prevent avoidable vision loss globally.
+          <p className="text-foreground/80 mb-4 text-lg">
+            At RetinalAI, we're revolutionizing eye disease detection through innovative AI technology. 
+            Our mission is to make advanced diagnostic capabilities accessible worldwide, helping prevent 
+            vision loss through early detection.
           </p>
-          <p className="text-gray-600 mb-4">
-            By combining advanced deep learning models with medical expertise, we've created a platform that 
-            can detect common retinal diseases with accuracy comparable to trained ophthalmologists.
+          <p className="text-foreground/80 mb-4 text-lg">
+            With our state-of-the-art deep learning models, we've achieved a remarkable 
+            <span className="text-primary font-bold"> 95.4% accuracy</span> in detecting common 
+            retinal conditions, matching the precision of experienced ophthalmologists.
           </p>
-          <p className="text-gray-600">
-            We believe that early detection is the key to preserving vision. Our technology aims to 
-            serve as a valuable screening tool, directing patients to seek appropriate medical care 
-            when needed and providing peace of mind when results are normal.
+          <p className="text-foreground/80 text-lg">
+            We believe that prevention is the key to preserving vision. Our platform serves as a 
+            crucial screening tool, enabling timely interventions and providing peace of mind 
+            through reliable results.
           </p>
         </div>
 
@@ -127,15 +129,15 @@ const About = () => {
       </div>
 
       <div className="purple-gradient rounded-2xl p-8 mb-16 shadow-xl">
-        <h2 className="text-3xl font-bold mb-6 text-center text-white">Model Accuracy</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center text-white">Performance Metrics</h2>
         <div className="grid grid-cols-1 gap-8">
           <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
-            <h3 className="font-medium text-2xl mb-3 text-white text-center">Overall Model Performance</h3>
+            <h3 className="font-medium text-2xl mb-3 text-white text-center">Model Accuracy Analysis</h3>
             <div className="flex justify-center items-center h-64">
               <div className="w-64 h-64 rounded-full bg-white/10 flex items-center justify-center border-8 border-white/30 shadow-lg">
                 <div>
                   <p className="text-6xl font-bold text-white">95.4<span className="text-3xl">%</span></p>
-                  <p className="text-white/80 text-center">Test Accuracy</p>
+                  <p className="text-white/90 text-center font-medium">Test Accuracy</p>
                 </div>
               </div>
             </div>

@@ -1,22 +1,21 @@
-
 import { Link } from "react-router-dom";
 import { Eye, Heart, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="purple-gradient text-white pt-12 pb-8 px-6">
+    <footer className="bg-gradient-to-br from-primary to-secondary text-white pt-12 pb-8 px-6">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1">
             <Link to="/" className="flex items-center space-x-2">
               <Eye className="h-6 w-6 text-white" />
               <span className="text-xl font-bold text-white">
-                Retinal<span className="text-accent-foreground">AI</span>
+                Retinal<span className="text-accent">AI</span>
               </span>
             </Link>
-            <p className="mt-4 text-white/80 text-sm">
-              Revolutionizing retinal diagnosis through advanced AI technology, 
-              helping detect eye conditions early and efficiently.
+            <p className="mt-4 text-white/90 text-sm leading-relaxed">
+              Transforming eye care through advanced AI technology, making early detection 
+              accessible and efficient for everyone.
             </p>
           </div>
           <div className="col-span-1">
@@ -84,8 +83,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-white/20 mt-10 pt-6">
-          <p className="text-center text-white/60 text-sm">
-            © {new Date().getFullYear()} RetinalAI. All rights reserved.
+          <p className="text-center text-white/80 text-sm">
+            © {new Date().getFullYear()} RetinalAI. Empowering Vision Through Innovation.
           </p>
         </div>
       </div>

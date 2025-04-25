@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,24 +6,24 @@ import { Eye, Heart, Search, Award, ArrowRight, CheckCircle } from "lucide-react
 const Home = () => {
   const features = [
     {
-      title: "Instant Retinal Analysis",
-      description: "Upload your retinal scans and get AI-powered diagnosis within seconds",
-      icon: <Search className="h-8 w-8 mb-4 text-primary group-hover:text-white" />
+      title: "Advanced AI Analysis",
+      description: "Experience instant retinal scan analysis powered by state-of-the-art deep learning technology",
+      icon: <Search className="h-8 w-8 mb-4 text-accent-foreground group-hover:text-white" />
     },
     {
-      title: "Multi-Disease Detection",
-      description: "Advanced detection of Cataract, AMD, DR, and Glaucoma with high accuracy",
-      icon: <Eye className="h-8 w-8 mb-4 text-secondary group-hover:text-white" />
+      title: "Comprehensive Detection",
+      description: "Identify multiple eye conditions including Cataract, AMD, DR, and Glaucoma with clinical-grade precision",
+      icon: <Eye className="h-8 w-8 mb-4 text-accent-foreground group-hover:text-white" />
     },
     {
-      title: "Comprehensive Reports",
-      description: "Detailed analysis with visualizations to better understand diagnosis results",
-      icon: <Award className="h-8 w-8 mb-4 text-primary group-hover:text-white" />
+      title: "Detailed Analysis",
+      description: "Receive in-depth reports with visual aids and clear explanations of detected conditions",
+      icon: <Award className="h-8 w-8 mb-4 text-accent-foreground group-hover:text-white" />
     },
     {
-      title: "Preventive Recommendations",
-      description: "Get personalized health tips and recommendations based on your results",
-      icon: <Heart className="h-8 w-8 mb-4 text-secondary group-hover:text-white" />
+      title: "Personalized Care",
+      description: "Get tailored health recommendations and follow-up care suggestions based on your results",
+      icon: <Heart className="h-8 w-8 mb-4 text-accent-foreground group-hover:text-white" />
     }
   ];
 
@@ -36,24 +35,14 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                AI-Powered 
-                <span className="text-secondary"> Retinal Disease Detection</span>
+                Revolutionary 
+                <span className="text-primary-foreground"> Eye Disease Detection</span>
               </h1>
-              <p className="text-lg text-white/80 mb-8">
-                RetinalAI uses cutting-edge artificial intelligence to analyze retinal images and detect 
-                common eye conditions including Cataract, AMD, Diabetic Retinopathy, and Glaucoma with 
-                95.4% accuracy.
+              <p className="text-xl text-white font-medium mb-8 leading-relaxed">
+                Empowering healthcare with AI-driven retinal analysis, achieving an impressive 
+                <span className="font-bold text-primary-foreground"> 95.4% accuracy</span> in detecting 
+                common eye conditions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  asChild 
-                  className="bg-white hover:bg-secondary hover:text-white text-primary font-medium px-8 py-6 text-lg rounded-full transition-all duration-300"
-                >
-                  <Link to="/diagnosis" className="flex items-center gap-2">
-                    Start Diagnosis <ArrowRight className="h-5 w-5" />
-                  </Link>
-                </Button>
-              </div>
             </div>
             <div className="flex justify-center lg:col-span-2">
               <img 
@@ -67,15 +56,15 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-6 bg-white">
+      {/* Features Section with enhanced contrast */}
+      <section className="py-20 px-6 bg-gradient-to-br from-background to-accent">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Why Choose RetinalAI?</h2>
+            <h2 className="text-3xl font-bold mb-4 text-primary">Excellence in Eye Care</h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our platform combines the latest in AI technology with medical expertise to provide
-              accurate, rapid detection of common retinal diseases.
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto font-medium">
+              Combining cutting-edge AI technology with medical expertise for precise, 
+              rapid detection of retinal conditions.
             </p>
           </div>
 
