@@ -57,7 +57,7 @@ const Home = () => {
       </section>
 
       {/* Features Section with enhanced contrast */}
-      <section className="py-20 px-6 bg-gradient-to-br from-background to-accent">
+      <section className="py-20 px-6 bg-gradient-to-br from-background via-accent to-background">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4 text-primary">Excellence in Eye Care</h2>
@@ -85,7 +85,7 @@ const Home = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 px-6 green-gradient rounded-t-3xl rounded-b-3xl -mt-6 mb-6">
+      <section className="py-20 px-6 bg-gradient-to-br from-background via-accent to-background -mt-6 mb-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4 text-white">How It Works</h2>
@@ -141,7 +141,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 purple-gradient rounded-t-3xl text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-background via-accent to-background text-white">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -152,9 +152,9 @@ const Home = () => {
                 insights into your retinal health today.
               </p>
               <Button 
-                variant="outline" 
+                variant="secondary" 
                 asChild
-                className="border-white text-white hover:bg-white hover:text-primary px-8 py-6 text-lg rounded-full"
+                className="bg-primary text-white hover:bg-primary/90 px-8 py-6 text-lg rounded-full"
               >
                 <Link to="/diagnosis" className="flex items-center gap-2">
                   Start Free Diagnosis <ArrowRight className="h-5 w-5" />

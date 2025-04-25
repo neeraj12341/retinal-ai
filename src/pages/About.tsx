@@ -75,35 +75,35 @@ const About = () => {
           </p>
         </div>
 
-        <div className="orange-gradient p-8 rounded-2xl shadow-lg order-1 lg:order-2">
+        <div className="bg-gradient-to-br from-primary via-secondary to-accent p-8 rounded-2xl shadow-lg order-1 lg:order-2">
           <h2 className="text-3xl font-bold mb-4 text-white">What We Detect</h2>
           <ul className="space-y-4">
             <li className="flex items-start bg-white/20 backdrop-blur-sm p-4 rounded-lg">
               <span className="text-white font-bold mr-2">•</span>
               <div>
-                <h3 className="font-medium text-white">Cataract</h3>
-                <p className="text-white/80">Clouding of the normally clear lens of the eye, causing blurry vision.</p>
+                <h3 className="font-bold text-white mb-1">Cataract</h3>
+                <p className="text-white/90 font-medium">Clouding of the normally clear lens of the eye, causing blurry vision.</p>
               </div>
             </li>
             <li className="flex items-start bg-white/20 backdrop-blur-sm p-4 rounded-lg">
               <span className="text-white font-bold mr-2">•</span>
               <div>
-                <h3 className="font-medium text-white">Age-related Macular Degeneration (AMD)</h3>
-                <p className="text-white/80">Deterioration of the central portion of the retina, affecting central vision.</p>
+                <h3 className="font-bold text-white mb-1">Age-related Macular Degeneration (AMD)</h3>
+                <p className="text-white/90 font-medium">Deterioration of the central portion of the retina, affecting central vision.</p>
               </div>
             </li>
             <li className="flex items-start bg-white/20 backdrop-blur-sm p-4 rounded-lg">
               <span className="text-white font-bold mr-2">•</span>
               <div>
-                <h3 className="font-medium text-white">Diabetic Retinopathy (DR)</h3>
-                <p className="text-white/80">Diabetes complication that damages blood vessels in the retina, potentially leading to blindness.</p>
+                <h3 className="font-bold text-white mb-1">Diabetic Retinopathy (DR)</h3>
+                <p className="text-white/90 font-medium">Diabetes complication that damages blood vessels in the retina, potentially leading to blindness.</p>
               </div>
             </li>
             <li className="flex items-start bg-white/20 backdrop-blur-sm p-4 rounded-lg">
               <span className="text-white font-bold mr-2">•</span>
               <div>
-                <h3 className="font-medium text-white">Glaucoma</h3>
-                <p className="text-white/80">Group of eye conditions that damage the optic nerve, often caused by abnormally high pressure in the eye.</p>
+                <h3 className="font-bold text-white mb-1">Glaucoma</h3>
+                <p className="text-white/90 font-medium">Group of eye conditions that damage the optic nerve, often caused by abnormally high pressure in the eye.</p>
               </div>
             </li>
           </ul>
