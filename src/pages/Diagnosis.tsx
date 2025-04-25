@@ -7,6 +7,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend 
 } from "recharts";
 import { toast } from "sonner";
+import { Eye } from "lucide-react"; // Import the Eye icon from lucide-react
 
 // For demo purposes - this would be replaced by actual model prediction
 const mockPrediction = (file: File): Promise<any> => {
@@ -294,7 +295,7 @@ const Diagnosis = () => {
                         <XAxis type="number" domain={[0, 100]} tickFormatter={(value) => `${value}%`} />
                         <YAxis dataKey="name" type="category" />
                         <Tooltip formatter={(value) => [`${value}%`, 'Confidence']} />
-                        <Bar dataKey="value" nameKey="name">
+                        <Bar dataKey="value">
                           {prepareBarChartData(result.confidence).map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={entry.fill} />
                           ))}
@@ -341,7 +342,6 @@ const Diagnosis = () => {
                         outerRadius={80}
                         fill="#8884d8"
                         dataKey="value"
-                        nameKey="name"
                         label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
                       >
                         {preparePieChartData(result.confidence).map((entry, index) => (
