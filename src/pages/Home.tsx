@@ -56,7 +56,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section with enhanced contrast */}
+      {/* Features Section */}
       <section className="py-20 px-6 bg-gradient-to-br from-background via-accent to-background">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -85,18 +85,18 @@ const Home = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-background via-accent to-background -mt-6 mb-6">
+      <section className="py-20 px-6 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-white">How It Works</h2>
-            <div className="h-1 w-20 bg-white mx-auto mb-6"></div>
-            <p className="text-white/80 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-primary">How It Works</h2>
+            <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto">
               Get accurate retinal disease detection in just three simple steps.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300">
+            <div className="bg-gradient-to-br from-background via-accent to-background p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-primary font-bold text-2xl">1</span>
               </div>
@@ -106,7 +106,7 @@ const Home = () => {
               </p>
             </div>
             
-            <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300">
+            <div className="bg-gradient-to-br from-background via-accent to-background p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-primary font-bold text-2xl">2</span>
               </div>
@@ -116,7 +116,7 @@ const Home = () => {
               </p>
             </div>
             
-            <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300">
+            <div className="bg-gradient-to-br from-background via-accent to-background p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-primary font-bold text-2xl">3</span>
               </div>
@@ -141,13 +141,13 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-background via-accent to-background text-white">
+      <section className="py-20 px-6 bg-white">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-4">Ready to Check Your Eye Health?</h2>
-              <div className="h-1 w-20 bg-white mb-6"></div>
-              <p className="text-lg mb-8 text-white/80">
+              <h2 className="text-3xl font-bold mb-4 text-primary">Ready to Check Your Eye Health?</h2>
+              <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mb-6"></div>
+              <p className="text-lg mb-8 text-gray-600">
                 Early detection is crucial for preventing vision loss. Use our AI-powered platform to get 
                 insights into your retinal health today.
               </p>
@@ -162,7 +162,7 @@ const Home = () => {
               </Button>
             </div>
             <div className="max-w-md mx-auto lg:mx-0 lg:ml-auto">
-              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl shadow-xl text-white">
+              <div className="bg-gradient-to-br from-background via-accent to-background p-6 rounded-xl shadow-xl">
                 <h3 className="font-bold text-xl mb-4">Did You Know?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,12 +8,9 @@ import {
 import { toast } from "sonner";
 import { Eye, Upload, AlertTriangle, CheckCircle } from "lucide-react"; 
 
-// For demo purposes - this would be replaced by actual model prediction
 const mockPrediction = (file: File): Promise<any> => {
   return new Promise((resolve) => {
-    // Simulate API delay
     setTimeout(() => {
-      // Random prediction for demo purposes
       const diseases = ["Cataract", "AMD", "DR", "Glaucoma", "Healthy"];
       const randomIndex = Math.floor(Math.random() * diseases.length);
       const disease = diseases[randomIndex];
@@ -34,7 +30,6 @@ const mockPrediction = (file: File): Promise<any> => {
           Healthy: 0.05 + Math.random() * 0.1,
         };
         
-        // Distribute remaining probability
         const remaining = 1 - confidenceScores[disease] - confidenceScores.Healthy;
         const otherDiseases = diseases.filter(d => d !== disease && d !== "Healthy");
         otherDiseases.forEach((d, i) => {
@@ -56,7 +51,6 @@ const mockPrediction = (file: File): Promise<any> => {
   });
 };
 
-// Health tips based on diagnosis
 const healthTips = {
   Cataract: [
     "Schedule an appointment with an ophthalmologist for a complete evaluation",
@@ -90,7 +84,6 @@ const healthTips = {
   ]
 };
 
-// COLORS for charts
 const COLORS = ["#C471F5", "#F377AB", "#84FAB0", "#8FD3F4", "#FFD1FF"];
 const COLOR_MAP = {
   Cataract: "#C471F5",
@@ -110,7 +103,6 @@ const Diagnosis = () => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
       
-      // Check if it's an image
       if (!file.type.includes('image/')) {
         toast.error("Please upload an image file");
         return;
@@ -118,14 +110,12 @@ const Diagnosis = () => {
       
       setSelectedFile(file);
       
-      // Create image preview
       const reader = new FileReader();
       reader.onload = (event) => {
         setImagePreview(event.target?.result as string);
       };
       reader.readAsDataURL(file);
       
-      // Reset any previous results
       setResult(null);
     }
   };
@@ -139,12 +129,9 @@ const Diagnosis = () => {
     setIsAnalyzing(true);
     
     try {
-      // In a real implementation, this would call your backend API
-      // that interfaces with the TensorFlow model
       const prediction = await mockPrediction(selectedFile);
       setResult(prediction);
       
-      // Show toast notification based on result
       if (prediction.prediction === "Healthy") {
         toast.success("Good news! No retinal diseases detected.");
       } else {
@@ -301,9 +288,8 @@ const Diagnosis = () => {
         </Card>
       </div>
       
-      {/* Recommendations Section */}
       {result && (
-        <Card className="mt-8 border-none shadow-xl overflow-hidden rounded-2xl">
+        <Card className="mt-8 border-none shadow-xl overflow-hidden rounded-2xl bg-white">
           <div className="h-2 bg-gradient-to-r from-primary to-secondary"></div>
           <CardContent className="p-6">
             <h2 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Recommendations</h2>
