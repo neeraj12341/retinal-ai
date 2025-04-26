@@ -159,40 +159,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      <div>
-        <h2 className="text-3xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="green-gradient p-6 rounded-xl shadow-lg text-white">
-            <h3 className="font-medium text-lg mb-2">Is this service meant to replace my eye doctor?</h3>
-            <p className="text-white/80">
-              No. RetinalAI is designed as a screening and educational tool, not a replacement for professional 
-              medical care. We recommend regular visits to eye care professionals.
-            </p>
-          </div>
-          <div className="orange-gradient p-6 rounded-xl shadow-lg text-white">
-            <h3 className="font-medium text-lg mb-2">How secure is my medical data?</h3>
-            <p className="text-white/80">
-              We take data privacy extremely seriously. All uploaded images are encrypted, processed securely, 
-              and automatically deleted after analysis unless you explicitly choose to save them.
-            </p>
-          </div>
-          <div className="purple-gradient p-6 rounded-xl shadow-lg text-white">
-            <h3 className="font-medium text-lg mb-2">What type of images work best?</h3>
-            <p className="text-white/80">
-              Our system works best with high-quality fundus (retinal) photographs taken by professional 
-              imaging equipment. Smartphone retinal adaptors can also provide adequate images.
-            </p>
-          </div>
-          <div className="bg-gradient-to-r from-primary to-secondary p-6 rounded-xl shadow-lg text-white">
-            <h3 className="font-medium text-lg mb-2">Can I monitor disease progression over time?</h3>
-            <p className="text-white/80">
-              Yes, our platform allows you to save previous results and compare changes over time, 
-              providing valuable information about disease progression or stability.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

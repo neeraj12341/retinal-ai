@@ -46,8 +46,8 @@ const Home = () => {
             </div>
             <div className="flex justify-center lg:col-span-2">
               <img 
-                src="/placeholder.svg" 
-                alt="Retinal Scanning Technology" 
+                src="/lovable-uploads/67d03b04-d354-49dc-9dc2-0209444aead2.png" 
+                alt="Advanced Eye Care Technology" 
                 className="rounded-2xl shadow-2xl max-w-full h-auto transform rotate-3"
                 style={{ maxHeight: "400px" }}
               />
@@ -96,32 +96,32 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-background via-accent to-background p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-primary font-bold text-2xl">1</span>
+            <div className="bg-white border border-gray-200 p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-2xl">1</span>
               </div>
-              <h3 className="font-bold text-xl mb-3 text-white">Upload Your Scan</h3>
-              <p className="text-white/80">
+              <h3 className="font-bold text-xl mb-3 text-gray-900">Upload Your Scan</h3>
+              <p className="text-gray-700">
                 Simply upload a high-quality retinal scan image to our secure platform.
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-background via-accent to-background p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-primary font-bold text-2xl">2</span>
+            <div className="bg-white border border-gray-200 p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-2xl">2</span>
               </div>
-              <h3 className="font-bold text-xl mb-3 text-white">AI Analysis</h3>
-              <p className="text-white/80">
+              <h3 className="font-bold text-xl mb-3 text-gray-900">AI Analysis</h3>
+              <p className="text-gray-700">
                 Our advanced ResNet50 model analyzes your image for signs of common retinal conditions.
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-background via-accent to-background p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-primary font-bold text-2xl">3</span>
+            <div className="bg-white border border-gray-200 p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-2xl">3</span>
               </div>
-              <h3 className="font-bold text-xl mb-3 text-white">Get Results & Recommendations</h3>
-              <p className="text-white/80">
+              <h3 className="font-bold text-xl mb-3 text-gray-900">Get Results & Recommendations</h3>
+              <p className="text-gray-700">
                 Receive a detailed report with visualization and personalized recommendations.
               </p>
             </div>
@@ -140,7 +140,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section with white background */}
       <section className="py-20 px-6 bg-white">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

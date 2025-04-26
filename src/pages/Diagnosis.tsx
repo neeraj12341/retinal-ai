@@ -232,13 +232,14 @@ const Diagnosis = () => {
           </CardContent>
         </Card>
         
-        <Card className={`border-none shadow-xl overflow-hidden rounded-2xl ${!result ? 'green-gradient' : 'card-hover'}`}>
+        
+        <Card className="border-none shadow-xl overflow-hidden rounded-2xl">
           <div className="h-2 bg-secondary"></div>
-          <CardContent className="p-6">
+          <CardContent className="p-6 bg-white">
             <h2 className="text-2xl font-semibold mb-4 text-secondary">Results</h2>
             
             {!result && (
-              <div className="flex flex-col items-center justify-center h-64 text-white">
+              <div className="flex flex-col items-center justify-center h-64 text-gray-500">
                 <Eye className="h-12 w-12 mb-3" />
                 <p>Upload and analyze a retinal image to see results here</p>
               </div>
