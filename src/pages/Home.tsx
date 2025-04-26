@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -46,10 +47,10 @@ const Home = () => {
             </div>
             <div className="flex justify-center lg:col-span-2">
               <img 
-                src="/lovable-uploads/67d03b04-d354-49dc-9dc2-0209444aead2.png" 
-                alt="Advanced Eye Care Technology" 
-                className="rounded-2xl shadow-2xl max-w-full h-auto transform rotate-3"
-                style={{ maxHeight: "400px" }}
+                src="/lovable-uploads/85d673a0-fb60-430d-81b5-04b1288d9361.png" 
+                alt="Eye Diagnosis Technology" 
+                className="rounded-2xl shadow-2xl max-w-full h-auto transform rotate-3 object-cover"
+                style={{ maxHeight: "400px", width: "100%" }}
               />
             </div>
           </div>
