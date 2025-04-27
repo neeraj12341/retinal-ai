@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Eye, Heart, Mail, Phone, MapPin } from "lucide-react";
 
@@ -5,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white pt-12 pb-8 px-6">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="col-span-1">
             <Link to="/" className="flex items-center space-x-2">
               <Eye className="h-6 w-6 text-white" />
@@ -48,31 +49,6 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-span-1">
-            <h3 className="font-medium text-lg mb-4">Resources</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="#" className="text-white/80 hover:text-white transition-colors text-sm">
-                  Eye Health Blog
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-white/80 hover:text-white transition-colors text-sm">
-                  Research Papers
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-white/80 hover:text-white transition-colors text-sm">
-                  Patient Resources
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-white/80 hover:text-white transition-colors text-sm">
-                  FAQs
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="col-span-1">
             <h3 className="font-medium text-lg mb-4">Contact Us</h3>
             <address className="not-italic text-white/80 text-sm space-y-3">
               <p className="flex items-center gap-2"><MapPin className="h-4 w-4" /> 123 Medical Center Drive</p>
@@ -93,3 +69,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

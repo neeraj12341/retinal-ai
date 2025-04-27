@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -167,15 +168,15 @@ const Home = () => {
                 <h3 className="font-bold text-xl mb-4">Did You Know?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-white mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
                     <span>Early detection of retinal diseases can prevent up to 95% of vision loss cases.</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-white mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
                     <span>Our AI model is trained on over 100,000 clinical retinal images.</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-white mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
                     <span>Regular eye check-ups, combined with AI screening, provide the best protection for your vision.</span>
                   </li>
                 </ul>
@@ -189,3 +190,4 @@ const Home = () => {
 };
 
 export default Home;
+
