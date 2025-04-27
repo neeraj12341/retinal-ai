@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
@@ -164,12 +163,12 @@ const Diagnosis = () => {
   
   return (
     <div className="container mx-auto py-12 px-6">
-      <div className="text-center mb-16">
-        <h1 className="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+      <div className="text-center mb-16 space-y-4">
+        <h1 className="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 leading-tight">
           Retinal Disease Diagnosis
         </h1>
         <div className="h-1 w-20 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mb-6"></div>
-        <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed pb-2">
+        <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed pb-2 px-4">
           Upload a high-quality retinal scan image for AI analysis. Our advanced model can 
           detect signs of Cataract, AMD, Diabetic Retinopathy, and Glaucoma.
         </p>
@@ -178,8 +177,8 @@ const Diagnosis = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <Card className="border-none shadow-xl overflow-hidden rounded-2xl card-hover">
           <div className="h-2 bg-primary"></div>
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-4 text-primary">Upload Retinal Image</h2>
+          <CardContent className="p-6 space-y-4">
+            <h2 className="text-2xl font-semibold mb-4 text-primary leading-tight">Upload Retinal Image</h2>
             <div className="mb-6">
               <input
                 type="file"
@@ -238,8 +237,8 @@ const Diagnosis = () => {
         
         <Card className="border-none shadow-xl overflow-hidden rounded-2xl">
           <div className="h-2 bg-secondary"></div>
-          <CardContent className="p-6 bg-white">
-            <h2 className="text-2xl font-semibold mb-4 text-secondary">Results</h2>
+          <CardContent className="p-6 bg-white space-y-4">
+            <h2 className="text-2xl font-semibold mb-4 text-secondary leading-tight">Results</h2>
             
             {!result && (
               <div className="flex flex-col items-center justify-center h-64 text-gray-500">
@@ -295,8 +294,10 @@ const Diagnosis = () => {
       {result && (
         <Card className="mt-8 border-none shadow-xl overflow-hidden rounded-2xl bg-white">
           <div className="h-2 bg-gradient-to-r from-primary to-secondary"></div>
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Recommendations</h2>
+          <CardContent className="p-6 space-y-4">
+            <h2 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary leading-tight">
+              Recommendations
+            </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="orange-gradient rounded-xl p-6 text-white">
