@@ -164,12 +164,12 @@ const Diagnosis = () => {
   
   return (
     <div className="container mx-auto py-12 px-6">
-      <div className="text-center mb-16"> {/* Increased bottom margin */}
+      <div className="text-center mb-16">
         <h1 className="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
           Retinal Disease Diagnosis
         </h1>
         <div className="h-1 w-20 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mb-6"></div>
-        <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed"> {/* Increased max-width and added leading-relaxed */}
+        <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed pb-2">
           Upload a high-quality retinal scan image for AI analysis. Our advanced model can 
           detect signs of Cataract, AMD, Diabetic Retinopathy, and Glaucoma.
         </p>
@@ -204,10 +204,10 @@ const Diagnosis = () => {
                       className="w-10 h-10 mb-3 text-primary" 
                       stroke="currentColor" 
                     />
-                    <p className="mb-2 text-sm text-gray-500">
+                    <p className="mb-2 text-sm text-gray-500 leading-relaxed">
                       <span className="font-semibold">Click to upload</span> or drag and drop
                     </p>
-                    <p className="text-xs text-gray-500">PNG, JPG, GIF (MAX. 10MB)</p>
+                    <p className="text-xs text-gray-500 leading-relaxed pb-1">PNG, JPG, GIF (MAX. 10MB)</p>
                   </div>
                 )}
               </label>
@@ -244,7 +244,7 @@ const Diagnosis = () => {
             {!result && (
               <div className="flex flex-col items-center justify-center h-64 text-gray-500">
                 <Eye className="h-12 w-12 mb-3" />
-                <p>Upload and analyze a retinal image to see results here</p>
+                <p className="leading-relaxed pb-1">Upload and analyze a retinal image to see results here</p>
               </div>
             )}
             
@@ -304,8 +304,8 @@ const Diagnosis = () => {
                 <ul className="space-y-2">
                   {healthTips[result.prediction as keyof typeof healthTips].map((tip, index) => (
                     <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-white mr-2 mt-1 flex-shrink-0" />
-                      <span>{tip}</span>
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                      <span className="leading-relaxed pb-1">{tip}</span>
                     </li>
                   ))}
                 </ul>
@@ -341,8 +341,8 @@ const Diagnosis = () => {
             <div className="mt-6 p-4 bg-gradient-to-r from-amber-100 to-amber-50 border border-amber-200 rounded-xl">
               <p className="text-amber-800 font-medium flex items-start">
                 <AlertTriangle className="h-5 w-5 mr-2 mt-1 flex-shrink-0" />
-                <strong>Important:</strong> This AI analysis is for informational purposes only and does not replace professional medical advice. 
-                Please consult with an eye care specialist for proper diagnosis and treatment.
+                <strong>Important:</strong> <span className="leading-relaxed pb-1">This AI analysis is for informational purposes only and does not replace professional medical advice. 
+                Please consult with an eye care specialist for proper diagnosis and treatment.</span>
               </p>
             </div>
           </CardContent>

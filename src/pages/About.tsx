@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Monitor, Search, Award } from "lucide-react";
 import {
@@ -49,7 +50,7 @@ const About = () => {
           Pioneering AI in Eye Care
         </h1>
         <div className="h-1 w-20 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mb-6"></div>
-        <p className="text-xl text-foreground/80 max-w-4xl mx-auto text-center font-medium leading-relaxed">
+        <p className="text-xl text-foreground/80 max-w-4xl mx-auto text-center font-medium leading-relaxed pb-2">
           Leading the revolution in early detection and management of retinal diseases 
           through advanced artificial intelligence.
         </p>
@@ -59,17 +60,17 @@ const About = () => {
         <div className="order-2 lg:order-1">
           <h2 className="text-3xl font-bold mb-4 text-primary">Our Vision</h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mb-6 rounded-full"></div>
-          <p className="text-foreground/80 mb-4 text-lg">
+          <p className="text-foreground/80 mb-6 text-lg leading-relaxed pb-1">
             At RetinalAI, we're revolutionizing eye disease detection through innovative AI technology. 
             Our mission is to make advanced diagnostic capabilities accessible worldwide, helping prevent 
             vision loss through early detection.
           </p>
-          <p className="text-foreground/80 mb-4 text-lg">
+          <p className="text-foreground/80 mb-6 text-lg leading-relaxed pb-1">
             With our state-of-the-art deep learning models, we've achieved a remarkable 
             <span className="text-primary font-bold"> 95.4% accuracy</span> in detecting common 
             retinal conditions, matching the precision of experienced ophthalmologists.
           </p>
-          <p className="text-foreground/80 text-lg">
+          <p className="text-foreground/80 text-lg leading-relaxed pb-1">
             We believe that prevention is the key to preserving vision. Our platform serves as a 
             crucial screening tool, enabling timely interventions and providing peace of mind 
             through reliable results.
@@ -83,28 +84,28 @@ const About = () => {
               <span className="text-white font-bold mr-2">•</span>
               <div>
                 <h3 className="font-bold text-white mb-1">Cataract</h3>
-                <p className="text-white/90 font-medium">Clouding of the normally clear lens of the eye, causing blurry vision.</p>
+                <p className="text-white/90 font-medium leading-relaxed pb-1">Clouding of the normally clear lens of the eye, causing blurry vision.</p>
               </div>
             </li>
             <li className="flex items-start bg-white/20 backdrop-blur-sm p-4 rounded-lg">
               <span className="text-white font-bold mr-2">•</span>
               <div>
                 <h3 className="font-bold text-white mb-1">Age-related Macular Degeneration (AMD)</h3>
-                <p className="text-white/90 font-medium">Deterioration of the central portion of the retina, affecting central vision.</p>
+                <p className="text-white/90 font-medium leading-relaxed pb-1">Deterioration of the central portion of the retina, affecting central vision.</p>
               </div>
             </li>
             <li className="flex items-start bg-white/20 backdrop-blur-sm p-4 rounded-lg">
               <span className="text-white font-bold mr-2">•</span>
               <div>
                 <h3 className="font-bold text-white mb-1">Diabetic Retinopathy (DR)</h3>
-                <p className="text-white/90 font-medium">Diabetes complication that damages blood vessels in the retina, potentially leading to blindness.</p>
+                <p className="text-white/90 font-medium leading-relaxed pb-1">Diabetes complication that damages blood vessels in the retina, potentially leading to blindness.</p>
               </div>
             </li>
             <li className="flex items-start bg-white/20 backdrop-blur-sm p-4 rounded-lg">
               <span className="text-white font-bold mr-2">•</span>
               <div>
                 <h3 className="font-bold text-white mb-1">Glaucoma</h3>
-                <p className="text-white/90 font-medium">Group of eye conditions that damage the optic nerve, often caused by abnormally high pressure in the eye.</p>
+                <p className="text-white/90 font-medium leading-relaxed pb-1">Group of eye conditions that damage the optic nerve, often caused by abnormally high pressure in the eye.</p>
               </div>
             </li>
           </ul>
@@ -122,7 +123,7 @@ const About = () => {
                   {tech.icon}
                 </div>
                 <h3 className="font-bold text-lg mb-2">{tech.name}</h3>
-                <p className="text-gray-600">{tech.description}</p>
+                <p className="text-gray-600 leading-relaxed pb-1">{tech.description}</p>
               </CardContent>
             </Card>
           ))}
@@ -152,7 +153,7 @@ const About = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <p className="text-white/80 text-sm mt-2 text-center">
+              <p className="text-white/80 text-sm mt-2 text-center leading-relaxed pb-1">
                 Our model shows excellent performance across all disease categories, with highest 
                 accuracy in detecting diabetic retinopathy and cataract.
               </p>
