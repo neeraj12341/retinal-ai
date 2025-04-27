@@ -44,11 +44,12 @@ const About = () => {
 
   return (
     <div className="container mx-auto py-12 px-6">
-      <div className="mb-16">
-        <h1 className="text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+      <div className="mb-16 text-center">
+        <h1 className="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
           Pioneering AI in Eye Care
         </h1>
-        <p className="text-xl text-foreground/80 max-w-3xl mx-auto text-center font-medium">
+        <div className="h-1 w-20 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mb-6"></div>
+        <p className="text-xl text-foreground/80 max-w-4xl mx-auto text-center font-medium leading-relaxed">
           Leading the revolution in early detection and management of retinal diseases 
           through advanced artificial intelligence.
         </p>

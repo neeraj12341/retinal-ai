@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -163,10 +164,12 @@ const Diagnosis = () => {
   
   return (
     <div className="container mx-auto py-12 px-6">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Retinal Disease Diagnosis</h1>
-        <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+      <div className="text-center mb-16"> {/* Increased bottom margin */}
+        <h1 className="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+          Retinal Disease Diagnosis
+        </h1>
+        <div className="h-1 w-20 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mb-6"></div>
+        <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed"> {/* Increased max-width and added leading-relaxed */}
           Upload a high-quality retinal scan image for AI analysis. Our advanced model can 
           detect signs of Cataract, AMD, Diabetic Retinopathy, and Glaucoma.
         </p>
