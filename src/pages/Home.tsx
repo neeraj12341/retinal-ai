@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -61,8 +62,8 @@ const Home = () => {
       <section className="py-20 px-6 bg-gradient-to-br from-background via-accent to-background">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-primary">Excellence in Eye Care</h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
+            <h2 className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-eye-primary to-eye-secondary">Excellence in Eye Care</h2>
+            <div className="h-1 w-20 bg-gradient-to-r from-eye-primary to-eye-secondary mx-auto mb-6"></div>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto font-medium">
               Combining cutting-edge AI technology with medical expertise for precise, 
               rapid detection of retinal conditions.
@@ -89,8 +90,8 @@ const Home = () => {
       <section className="py-20 px-6 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-primary">How It Works</h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
+            <h2 className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-eye-primary to-eye-secondary">How It Works</h2>
+            <div className="h-1 w-20 bg-gradient-to-r from-eye-primary to-eye-secondary mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Get accurate retinal disease detection in just three simple steps.
             </p>
@@ -98,7 +99,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white border border-gray-200 p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-eye-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-2xl">1</span>
               </div>
               <h3 className="font-bold text-xl mb-3 text-gray-900">Upload Your Scan</h3>
@@ -108,7 +109,7 @@ const Home = () => {
             </div>
             
             <div className="bg-white border border-gray-200 p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-eye-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-2xl">2</span>
               </div>
               <h3 className="font-bold text-xl mb-3 text-gray-900">AI Analysis</h3>
@@ -118,7 +119,7 @@ const Home = () => {
             </div>
             
             <div className="bg-white border border-gray-200 p-8 rounded-xl text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-eye-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-2xl">3</span>
               </div>
               <h3 className="font-bold text-xl mb-3 text-gray-900">Get Results & Recommendations</h3>
@@ -131,7 +132,7 @@ const Home = () => {
           <div className="text-center mt-12">
             <Button 
               asChild 
-              className="bg-white hover:bg-primary text-primary hover:text-white font-medium px-8 py-6 text-lg rounded-full"
+              className="bg-white hover:bg-eye-primary text-eye-primary hover:text-white font-medium px-8 py-6 text-lg rounded-full"
             >
               <Link to="/diagnosis" className="flex items-center gap-2">
                 Try It Now <ArrowRight className="h-5 w-5" />
@@ -146,8 +147,8 @@ const Home = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-primary">Ready to Check Your Eye Health?</h2>
-              <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mb-6"></div>
+              <h2 className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-eye-primary to-eye-secondary">Ready to Check Your Eye Health?</h2>
+              <div className="h-1 w-20 bg-gradient-to-r from-eye-primary to-eye-secondary mb-6"></div>
               <p className="text-lg mb-8 text-gray-600">
                 Early detection is crucial for preventing vision loss. Use our AI-powered platform to get 
                 insights into your retinal health today.
@@ -155,7 +156,7 @@ const Home = () => {
               <Button 
                 variant="secondary" 
                 asChild
-                className="bg-primary text-white hover:bg-primary/90 px-8 py-6 text-lg rounded-full"
+                className="bg-eye-primary text-white hover:bg-eye-secondary px-8 py-6 text-lg rounded-full"
               >
                 <Link to="/diagnosis" className="flex items-center gap-2">
                   Start Free Diagnosis <ArrowRight className="h-5 w-5" />
