@@ -11,7 +11,7 @@ const Footer = () => {
             <Link to="/" className="flex items-center space-x-2">
               <Eye className="h-6 w-6 text-white" />
               <span className="text-xl font-bold text-white">
-                Retinal<span className="text-accent">AI</span>
+                Retinal<span className="text-blue-400">AI</span>
               </span>
             </Link>
             <p className="mt-4 text-white/90 text-sm leading-relaxed">
@@ -69,4 +69,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

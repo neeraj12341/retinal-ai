@@ -1,3 +1,4 @@
+
 export const healthTips = {
   ARMD: [
     "Schedule an appointment with a retina specialist immediately",
@@ -32,11 +33,11 @@ export const healthTips = {
 };
 
 export const COLOR_MAP = {
-  ARMD: "#FF6B6B",  // Bright red
-  Cataract: "#C471F5",  // Purple
-  "Diabetic Retinopathy": "#4ECDC4",  // Turquoise
-  Glaucoma: "#8FD3F4",  // Light blue
-  Normal: "#95D45A"  // Light green
+  ARMD: "#0EA5E9",  // Ocean blue
+  Cataract: "#1EAEDB",  // Bright blue
+  "Diabetic Retinopathy": "#0C4A6E",  // Deep blue
+  Glaucoma: "#33C3F0",  // Sky blue 
+  Normal: "#D3E4FD"  // Soft blue
 };
 
 export const mockPrediction = async (file: File): Promise<any> => {
