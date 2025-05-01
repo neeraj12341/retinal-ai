@@ -33,11 +33,11 @@ export const healthTips = {
 };
 
 export const COLOR_MAP = {
-  ARMD: "#0EA5E9",  // Ocean blue
-  Cataract: "#1EAEDB",  // Bright blue
-  "Diabetic Retinopathy": "#0C4A6E",  // Deep blue
-  Glaucoma: "#33C3F0",  // Sky blue 
-  Normal: "#D3E4FD"  // Soft blue
+  ARMD: "#0284C7",      // Azure Blue
+  Cataract: "#38BDF8",  // Sky Blue
+  "Diabetic Retinopathy": "#0C4A6E",  // Deep Blue
+  Glaucoma: "#0EA5E9",  // Dodger Blue 
+  Normal: "#7DD3FC"     // Light Blue
 };
 
 export const mockPrediction = async (file: File): Promise<any> => {

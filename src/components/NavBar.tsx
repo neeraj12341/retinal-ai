@@ -11,31 +11,31 @@ const NavBar = () => {
     <nav className="bg-white/80 backdrop-blur-md shadow-md py-4 px-6 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
-          <Stethoscope className="h-6 w-6 text-primary" />
-          <span className="text-xl font-bold text-secondary">
-            Retinal<span className="text-primary">AI</span>
+          <Stethoscope className="h-6 w-6 text-eye-primary" />
+          <span className="text-xl font-bold text-eye-secondary">
+            Retinal<span className="text-eye-primary">AI</span>
           </span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 items-center">
-          <Link to="/" className="text-secondary hover:text-primary font-medium transition-colors">
+          <Link to="/" className="text-eye-dark hover:text-eye-primary font-medium transition-colors">
             Home
           </Link>
-          <Link to="/diagnosis" className="text-secondary hover:text-primary font-medium transition-colors">
+          <Link to="/diagnosis" className="text-eye-dark hover:text-eye-primary font-medium transition-colors">
             Diagnosis
           </Link>
-          <Link to="/about" className="text-secondary hover:text-primary font-medium transition-colors">
+          <Link to="/about" className="text-eye-dark hover:text-eye-primary font-medium transition-colors">
             About
           </Link>
-          <Link to="/contact" className="text-secondary hover:text-primary font-medium transition-colors">
+          <Link to="/contact" className="text-eye-dark hover:text-eye-primary font-medium transition-colors">
             Contact
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-secondary focus:outline-none"
+          className="md:hidden text-eye-secondary focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
@@ -62,28 +62,28 @@ const NavBar = () => {
           <div className="flex flex-col space-y-4">
             <Link
               to="/"
-              className="text-secondary hover:text-primary font-medium transition-colors px-3 py-2"
+              className="text-eye-dark hover:text-eye-primary font-medium transition-colors px-3 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/diagnosis"
-              className="text-secondary hover:text-primary font-medium transition-colors px-3 py-2"
+              className="text-eye-dark hover:text-eye-primary font-medium transition-colors px-3 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Diagnosis
             </Link>
             <Link
               to="/about"
-              className="text-secondary hover:text-primary font-medium transition-colors px-3 py-2"
+              className="text-eye-dark hover:text-eye-primary font-medium transition-colors px-3 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="text-secondary hover:text-primary font-medium transition-colors px-3 py-2"
+              className="text-eye-dark hover:text-eye-primary font-medium transition-colors px-3 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact

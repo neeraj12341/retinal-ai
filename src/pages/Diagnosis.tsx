@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { toast } from "sonner";
 import UploadSection from "@/components/diagnosis/UploadSection";
@@ -72,10 +73,10 @@ const Diagnosis = () => {
   return (
     <div className="container mx-auto py-12 px-6">
       <div className="text-center mb-16 space-y-6">
-        <h1 className="text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 leading-tight px-4">
+        <h1 className="text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-eye-primary to-eye-teal leading-tight px-4">
           Retinal Disease Diagnosis
         </h1>
-        <div className="h-1 w-20 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mb-8"></div>
+        <div className="h-1 w-20 bg-gradient-to-r from-eye-primary to-eye-teal mx-auto mb-8"></div>
         <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed pb-4 px-6">
           Upload a high-quality retinal scan image for AI analysis. Our advanced model can 
           detect signs of Cataract, ARMD, Diabetic Retinopathy, and Glaucoma.

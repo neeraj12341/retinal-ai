@@ -16,7 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
   }, [location.pathname]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-background to-accent">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-background to-eye-light">
       <NavBar />
       <main className="flex-grow" key={location.pathname}>
         {children}

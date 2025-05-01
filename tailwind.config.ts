@@ -65,11 +65,13 @@ export default {
 				},
 				// Using direct color values for better visualization of vibrant gradients
 				eye: {
-					primary: '#1EAEDB', // Changed from purple to bright blue
-					secondary: '#0EA5E9', // Changed to ocean blue
-					accent: '#33C3F0', // Changed to sky blue 
-					light: '#D3E4FD', // Changed to soft blue
-					dark: '#0C4A6E' // Changed to deep blue
+					primary: '#0EA5E9',   // Dodger Blue
+					secondary: '#0284C7', // Azure Blue
+					accent: '#38BDF8',    // Sky Blue
+					light: '#7DD3FC',     // Light Blue
+					dark: '#0C4A6E',      // Deep Blue
+					teal: '#0D9488',      // Teal
+					aqua: '#5EEAD4'       // Aqua
 				}
 			},
 			borderRadius: {
