@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   PieChart, Pie, Cell, ResponsiveContainer, 
@@ -25,7 +24,7 @@ const About = () => {
   return (
     <div className="container mx-auto py-12 px-6">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-eye-primary to-eye-secondary">
+        <h1 className="text-4xl font-bold mb-2 text-eye-primary">
           Pioneering AI in Eye Care
         </h1>
         <div className="h-1 w-20 bg-gradient-to-r from-eye-primary to-eye-secondary mx-auto mb-6"></div>
