@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -61,7 +60,7 @@ const Contact = () => {
                 <Label htmlFor="name">Your Name</Label>
                 <Input
                   id="name"
-                  name="name"
+                  name="Name"
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -72,7 +71,7 @@ const Contact = () => {
                 <Label htmlFor="email">Email Address</Label>
                 <Input
                   id="email"
-                  name="email"
+                  name="Email"
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -84,7 +83,7 @@ const Contact = () => {
                 <Label htmlFor="subject">Subject</Label>
                 <Input
                   id="subject"
-                  name="subject"
+                  name="Disease"
                   value={formData.subject}
                   onChange={handleChange}
                   required
@@ -95,7 +94,7 @@ const Contact = () => {
                 <Label htmlFor="message">Message</Label>
                 <Textarea
                   id="message"
-                  name="message"
+                  name="Message"
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -132,9 +131,9 @@ const Contact = () => {
               <CardContent className="p-6">
                 <h3 className="font-medium text-lg mb-2">Address</h3>
                 <address className="not-italic text-gray-600">
-                  123 Medical Center Drive<br />
-                  Health City, HC 12345<br />
-                  United States
+                  Retinal AI Medical Center<br />
+                  Jubli Hills, Hyderabad, Telangana<br />
+                  India
                 </address>
               </CardContent>
             </Card>
@@ -143,10 +142,10 @@ const Contact = () => {
               <CardContent className="p-6">
                 <h3 className="font-medium text-lg mb-2">Contact Details</h3>
                 <p className="text-gray-600 mb-2">
-                  <strong>Email:</strong> info@eyevisionai.com
+                  <strong>Email:</strong> info@retinalai.com
                 </p>
                 <p className="text-gray-600">
-                  <strong>Phone:</strong> +1 (555) 123-4567
+                  <strong>Phone:</strong> +91 9876543210
                 </p>
               </CardContent>
             </Card>
@@ -162,17 +161,6 @@ const Contact = () => {
                 </p>
               </CardContent>
             </Card>
-            
-            <div className="bg-eye-light p-6 rounded-lg">
-              <h3 className="font-medium text-lg mb-2">Interested in Partnership?</h3>
-              <p className="text-gray-700 mb-4">
-                If you're a healthcare provider, research institution, or technology company interested 
-                in collaborating with EyeVisionAI, please email us at partners@eyevisionai.com.
-              </p>
-              <p className="text-gray-700">
-                We're always looking for opportunities to expand our impact in eye health.
-              </p>
-            </div>
           </div>
         </div>
       </div>

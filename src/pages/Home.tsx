@@ -1,9 +1,8 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Eye, Heart, Search, Award, ArrowRight, CheckCircle } from "lucide-react";
+import { Eye, Heart, Search, ChartArea, ArrowRight, CheckCircle } from "lucide-react";
 
 const Home = () => {
   const features = [
@@ -20,7 +19,7 @@ const Home = () => {
     {
       title: "Detailed Analysis",
       description: "Receive in-depth reports with visual aids and clear explanations of detected conditions",
-      icon: <Award className="h-8 w-8 mb-4 text-accent-foreground group-hover:text-white" />
+      icon: <ChartArea className="h-8 w-8 mb-4 text-accent-foreground group-hover:text-white" />
     },
     {
       title: "Personalized Care",
@@ -37,8 +36,8 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Revolutionary 
-                <span className="text-primary-foreground"> Eye Disease Detection</span>
+                Retinal Blindness Detection  
+                <span className="text-primary-foreground"> Using Deep Learning</span>
               </h1>
               <p className="text-xl text-white font-medium mb-8 leading-relaxed">
                 Empowering healthcare with AI-driven retinal analysis, achieving an impressive 
@@ -72,13 +71,13 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="group feature-card-gradient border-none hover:shadow-xl transition-all duration-500 card-hover">
-                <CardContent className="p-6 text-center group-hover:text-white">
+              <Card key={index} className="border-none hover:shadow-xl transition-all duration-500 card-hover">
+                <CardContent className="p-6 text-center">
                   <div className="flex justify-center">
-                    {feature.icon}
+                    <div className="text-accent-foreground">{feature.icon}</div>
                   </div>
-                  <h3 className="font-bold text-lg mb-2 group-hover:text-white">{feature.title}</h3>
-                  <p className="text-gray-600 group-hover:text-white">{feature.description}</p>
+                  <h3 className="font-bold text-lg mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}

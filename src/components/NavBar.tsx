@@ -25,7 +25,7 @@ const NavBar = () => {
             Diagnosis
           </Link>
           <Link to="/about" className="text-secondary hover:text-primary font-medium transition-colors">
-            About Us
+            About
           </Link>
           <Link to="/contact" className="text-secondary hover:text-primary font-medium transition-colors">
             Contact
@@ -78,7 +78,7 @@ const NavBar = () => {
               className="text-secondary hover:text-primary font-medium transition-colors px-3 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              About Us
+              About
             </Link>
             <Link
               to="/contact"

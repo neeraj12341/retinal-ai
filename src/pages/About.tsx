@@ -1,5 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Monitor, Search, Award } from "lucide-react";
+import { Award } from "lucide-react";
+import TensorFlowIcon from "@/components/icons/TensorFlowIcon";
+import NeuralNetworkIcon from "@/components/icons/NeuralNetworkIcon";
+import TransferLearningIcon from "@/components/icons/TransferLearningIcon";
 import {
   ResponsiveContainer, 
   Tooltip,
@@ -15,17 +18,17 @@ const About = () => {
     {
       name: "TensorFlow 2.9.1",
       description: "Powers our advanced neural network model for image analysis",
-      icon: <Monitor className="h-8 w-8 text-primary" />
+      icon: <TensorFlowIcon className="h-8 w-8 text-primary" />
     },
     {
       name: "ResNet50 Architecture",
       description: "Deep residual learning framework for superior image recognition",
-      icon: <Search className="h-8 w-8 text-secondary" />
+      icon: <NeuralNetworkIcon className="h-8 w-8 text-secondary" />
     },
     {
       name: "Transfer Learning",
       description: "Leverages pre-trained networks adapted for retinal disease detection",
-      icon: <Heart className="h-8 w-8 text-primary" />
+      icon: <TransferLearningIcon className="h-8 w-8 text-primary" />
     },
     {
       name: "Medical Validation",
@@ -143,21 +146,168 @@ const About = () => {
               </div>
             </div>
             
-            <div className="mt-8">
-              <h3 className="font-medium text-xl mb-3 text-white text-center">Confusion Matrix</h3>
-              <div className="h-96 bg-white/10 p-4 rounded-xl">
-                <img 
-                  src="/lovable-uploads/85d673a0-fb60-430d-81b5-04b1288d9361.png" 
-                  alt="Confusion Matrix" 
-                  className="w-full h-full object-contain"
-                />
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-medium text-xl mb-3 text-white text-center">Confusion Matrix</h3>
+                <div className="bg-white/10 p-4 rounded-xl">
+                  <img 
+                    src="/lovable-uploads/85d673a0-fb60-430d-81b5-04b1288d9361.png" 
+                    alt="Confusion Matrix" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
-              <p className="text-white/80 text-sm mt-2 text-center leading-relaxed pb-1">
-                Our model shows excellent performance across all disease categories, with highest 
-                accuracy in detecting diabetic retinopathy and cataract.
-              </p>
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="font-medium text-xl mb-3 text-white text-center">Detailed Metrics</h3>
+                  <div className="bg-white/10 p-4 rounded-xl">
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-white">
+                        <thead>
+                          <tr className="border-b border-white/20">
+                            <th className="text-left py-2">Class</th>
+                            <th className="text-center py-2">Precision</th>
+                            <th className="text-center py-2">Recall</th>
+                            <th className="text-center py-2">F1-Score</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="border-b border-white/10">
+                            <td className="py-2">ARMD</td>
+                            <td className="text-center">1.00</td>
+                            <td className="text-center">1.00</td>
+                            <td className="text-center">1.00</td>
+                          </tr>
+                          <tr className="border-b border-white/10">
+                            <td className="py-2">Cataract</td>
+                            <td className="text-center">0.96</td>
+                            <td className="text-center">0.95</td>
+                            <td className="text-center">0.96</td>
+                          </tr>
+                          <tr className="border-b border-white/10">
+                            <td className="py-2">Diabetic Retinopathy</td>
+                            <td className="text-center">1.00</td>
+                            <td className="text-center">0.99</td>
+                            <td className="text-center">1.00</td>
+                          </tr>
+                          <tr className="border-b border-white/10">
+                            <td className="py-2">Glaucoma</td>
+                            <td className="text-center">0.93</td>
+                            <td className="text-center">0.93</td>
+                            <td className="text-center">0.93</td>
+                          </tr>
+                          <tr>
+                            <td className="py-2">Normal</td>
+                            <td className="text-center">0.89</td>
+                            <td className="text-center">0.91</td>
+                            <td className="text-center">0.90</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-medium text-xl mb-3 text-white text-center">Dataset Information</h3>
+                  <div className="bg-white/10 p-4 rounded-xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="text-white font-medium mb-2">Training & Validation Datasets</h4>
+                        <ul className="text-white/90 text-sm space-y-2">
+                          <li className="flex items-center gap-2">
+                            <span>• ARMD Curated Dataset 2023</span>
+                            <a 
+                              href="https://www.kaggle.com/datasets/rakhshandamujib/armd-curated-dataset-2023"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center hover:text-primary transition-colors"
+                            >
+                              <img src="/external_link.png" alt="External Link" className="w-4 h-4" />
+                            </a>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <span>• Origa Dataset</span>
+                            <a 
+                              href="https://www.kaggle.com/datasets/arnavjain1/glaucoma-datasets"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center hover:text-primary transition-colors"
+                            >
+                              <img src="/external_link.png" alt="External Link" className="w-4 h-4" />
+                            </a>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <span>• Refuge Dataset</span>
+                            <a 
+                              href="https://www.kaggle.com/datasets/arnavjain1/glaucoma-datasets"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center hover:text-primary transition-colors"
+                            >
+                              <img src="/external_link.png" alt="External Link" className="w-4 h-4" />
+                            </a>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <span>• Aptos2019 Dataset</span>
+                            <a 
+                              href="https://www.kaggle.com/datasets/mariaherrerot/aptos2019"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center hover:text-primary transition-colors"
+                            >
+                              <img src="/external_link.png" alt="External Link" className="w-4 h-4" />
+                            </a>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <span>• ODIR-5K Classification Dataset</span>
+                            <a 
+                              href="https://www.kaggle.com/datasets/tanjemahamed/odir5k-classification"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center hover:text-primary transition-colors"
+                            >
+                              <img src="/external_link.png" alt="External Link" className="w-4 h-4" />
+                            </a>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <span>• ODIR-5K Dataset</span>
+                            <a 
+                              href="https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center hover:text-primary transition-colors"
+                            >
+                              <img src="/external_link.png" alt="External Link" className="w-4 h-4" />
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-white font-medium mb-2">Dataset Statistics</h4>
+                        <div className="space-y-4">
+                          <div>
+                            <ul className="text-white/90 text-sm space-y-1">
+                              <li>• Total Images: Approximately 1,00,000</li>
+                              <li>• Balanced class distribution</li>
+                              <li>• High-quality Images</li>
+                              <li>• Pre-defined class Labels</li>
+                              
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <p className="text-white/90 text-center leading-relaxed">
+            Our model achieves exceptional performance across all disease categories, with particularly high accuracy in ARMD and Diabetic Retinopathy detection.
+          </p>
         </div>
       </div>
     </div>

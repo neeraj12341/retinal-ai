@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Eye } from "lucide-react";
@@ -21,7 +20,7 @@ const ResultsSection = ({ result }: ResultsSectionProps) => {
   };
 
   return (
-    <Card className="border-none shadow-xl overflow-hidden rounded-2xl">
+    <Card className="border-none shadow-xl overflow-hidden rounded-2xl card-hover">
       <div className="h-2 bg-secondary"></div>
       <CardContent className="p-6 bg-white space-y-4">
         <h2 className="text-2xl font-semibold mb-4 text-secondary leading-tight">

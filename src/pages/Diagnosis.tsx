@@ -49,6 +49,10 @@ const Diagnosis = () => {
       } else {
         toast.warning(`Potential ${prediction.prediction} detected. Please consult with a specialist.`);
       }
+      
+      // Clear the image preview and selected file after analysis
+      setImagePreview(null);
+      setSelectedFile(null);
     } catch (error) {
       console.error("Error analyzing image:", error);
       toast.error("An error occurred while analyzing the image");
@@ -74,7 +78,7 @@ const Diagnosis = () => {
         <div className="h-1 w-20 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mb-8"></div>
         <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed pb-4 px-6">
           Upload a high-quality retinal scan image for AI analysis. Our advanced model can 
-          detect signs of Cataract, AMD, Diabetic Retinopathy, and Glaucoma.
+          detect signs of Cataract, ARMD, Diabetic Retinopathy, and Glaucoma.
         </p>
       </div>
       
@@ -90,7 +94,7 @@ const Diagnosis = () => {
         <ResultsSection result={result} />
       </div>
       
-      {result && <RecommendationsSection result={result} preparePieChartData={preparePieChartData} />}
+      {result && <div className="mt-12"><RecommendationsSection result={result} preparePieChartData={preparePieChartData} /></div>}
     </div>
   );
 };
